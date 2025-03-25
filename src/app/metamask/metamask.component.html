@@ -1,0 +1,10 @@
+<div class="container">
+    <h2>Conectar Metamask con Angular</h2>
+    <p *ngIf="!isMetamaskInstalled" class="error">Metamask no está instalado. Instálalo para continuar.</p>
+
+    <button (click)="connectMetamask()" [disabled]="!isMetamaskInstalled">
+        Conectar con Metamask
+    </button>
+
+    <p *ngIf="account">Cuenta conectada: <strong>{{ account }}</strong></p>
+</div>
